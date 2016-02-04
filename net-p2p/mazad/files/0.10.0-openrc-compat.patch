@@ -1,0 +1,24 @@
+--- contrib/init/mazad.openrc	2015-03-03 09:37:59.919728713 +0000
++++ contrib/init/mazad.openrc	2015-03-03 09:38:08.109757531 +0000
+@@ -12,9 +12,11 @@
+ MAZAD_PIDDIR=${MAZAD_PIDDIR:-/var/run/mazad}
+ MAZAD_PIDFILE=${MAZAD_PIDFILE:-${MAZAD_PIDDIR}/mazad.pid}
+ MAZAD_DATADIR=${MAZAD_DATADIR:-${MAZAD_DEFAULT_DATADIR}}
+-MAZAD_USER=${MAZAD_USER:-maza}
++MAZAD_USER=${MAZAD_USER:-${MAZA_USER:-maza}}
+ MAZAD_GROUP=${MAZAD_GROUP:-maza}
+ MAZAD_BIN=${MAZAD_BIN:-/usr/bin/mazad}
++MAZAD_NICE=${MAZAD_NICE:-${NICELEVEL:-0}}
++MAZAD_OPTS="${MAZAD_OPTS:-${MAZA_OPTS}}"
+ 
+ name="MAZA Core Daemon"
+ description="MAZA crypto-currency p2p network daemon"
+@@ -28,7 +30,7 @@
+ 
+ required_files="${MAZAD_CONFIGFILE}"
+ start_stop_daemon_args="-u ${MAZAD_USER} \
+-			-N ${MAZAD_NICE:-0} -w 2000"
++			-N ${MAZAD_NICE} -w 2000"
+ pidfile="${MAZAD_PIDFILE}"
+ retry=60
+ 

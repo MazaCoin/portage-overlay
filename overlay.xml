@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE repositories SYSTEM "http://www.gentoo.org/dtd/repositories.dtd">
+<repositories xmlns="" version="1.0">
+  <repo quality="experimental" status="unofficial">
+    <name>maza</name>
+    <description>maza related ebuilds from #maza-dev team on freenode</description>
+    <homepage>https://github.com/mazacoin/portage-overlayo</homepage>
+    <owner>
+      <email>guruvan@maza.club</email>
+      <name>MAZA dev team</name>
+    </owner>
+    <source type="git">https://github.com/mazacoin/portage-overlay.git</source>
+  </repo>
+</repositories>

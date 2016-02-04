@@ -1,0 +1,8 @@
+/var/lib/maza/.maza/debug.log {
+	missingok
+	weekly
+	sharedscripts
+	postrotate
+		killall -HUP mazad
+	endscript
+}

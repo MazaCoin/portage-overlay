@@ -1,0 +1,10 @@
+# Config file for /etc/init.d/bitcoin
+
+# owner of bitcoind process (don't change, must be existing)
+MAZA_USER="maza"
+
+# See http://www.bitcoin.org/smf/index.php?topic=1063
+MAZA_OPTS="${MAZA_OPTS}"
+
+# nice level
+NICELEVEL="19"

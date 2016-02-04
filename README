@@ -1,0 +1,12 @@
+Using the ebuilds:
+	USE=git emerge layman
+	layman -a maza https://github.com/mazacoin/portage-overlay.git
+
+Whenever you update (emerge --sync), also run:
+	layman -S
+
+Come to freenode #maza-dev  nd let us know if you'd like to help out :) 
+
+This is adapted from overlay from bitcoin-gentoo https://gitlab.com/bitcoin/gentoo.git
+More bitcoin related packages can be found in that overlay
+

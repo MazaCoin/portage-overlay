@@ -1,0 +1,5 @@
+import bitcoin
+remove bitcoin specific packages
+add net-p2p/mazad
+add virtual/maza-leveldb
+
