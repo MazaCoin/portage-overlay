@@ -67,9 +67,10 @@ src_install() {
 	dosym /etc/maza/maza.conf /var/lib/maza/.maza/maza.conf
 
 	dodoc doc/assets-attribution.md doc/tor.md
-	doman contrib/debian/manpages/{mazad.1,maza.conf.5}
+	## Following need renaming in maza source
+	#doman contrib/debian/manpages/{mazad.1,maza.conf.5}
 
-	newbashcomp contrib/${PN}.bash-completion ${PN}
+	#newbashcomp contrib/${PN}.bash-completion ${PN}
 
 	if use examples; then
 		docinto examples
