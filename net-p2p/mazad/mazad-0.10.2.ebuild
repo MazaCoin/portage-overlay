@@ -64,7 +64,6 @@ src_install() {
 	keepdir /var/lib/maza/.maza
 	fperms 700 /var/lib/maza/
 	fowners maza:maza /var/lib/maza/
-	fowners maza:maza /var/lib/maza/maza.
 	dosym /etc/maza/maza.conf /var/lib/maza/.maza/maza.conf
 
 	dodoc doc/assets-attribution.md doc/tor.md

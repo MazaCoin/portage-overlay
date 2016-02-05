@@ -305,7 +305,7 @@ maza_src_test() {
 
 maza_src_install() {
 	default
-	[ "${PN}" = "libmazaconsensus" ] || rm "${D}/usr/bin/test_maza"
+	#[ "${PN}" = "libmazaconsensus" ] || rm "${D}/usr/bin/test_maza"
 }
 
 _MAZA_ECLASS=1
