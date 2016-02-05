@@ -252,8 +252,9 @@ maza_prepare() {
 
 maza_autoreconf() {
 	eautoreconf
-	rm -r src/leveldb || die
-	rm -r src/secp256k1 || die
+	echo "Not building properly without leveldb/secp256k1 in src/"
+	#rm -r src/leveldb || die
+	#rm -r src/secp256k1 || die
 }
 
 maza_src_prepare() {
