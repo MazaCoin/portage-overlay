@@ -35,6 +35,12 @@ src_prepare() {
 	epatch "${FILESDIR}/miniupnpc-14.patch"
 	epatch "${FILESDIR}/0.10.0-openrc-compat.patch"
 	maza_src_prepare
+        if has_version '>=dev-libs/leveldb-1.18-r1'; then
+        # Newer leveldb has changed header location.
+        sed -i \
+           -e '/#include/s:memenv.h:leveldb/helpers/memenv.h:' \
+           src/leveldbwrapper.cpp || die
+	fi
 }
 
 src_configure() {
