@@ -212,9 +212,10 @@ maza_prepare() {
 	if [ -n "${MAZA_NO_SYSLIBS}" ]; then
 		true
 	elif [ "${PV}" = "9999" ]; then
-		epatch "${FILESDIR}/${PV}-syslibs.patch"
+		#epatch "${FILESDIR}/${PV}-syslibs.patch"
+		echo "No Syslibs patch" 
 	else
-                echo "LJR trying to patch everything" 
+                echo "Not using the syslibs patch" 
 		#epatch "$(LJR_PATCH syslibs)"
 	fi
 	if use_if_iuse ljr; then
